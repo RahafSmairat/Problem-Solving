@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator and Find Prime</title>
+</head>
+
+<body>
+    <script>
+        /*
+        Create a Simple Calculator
+        Problem: Create a function simpleCalculator(a, b, operator) that performs basic arithmetic operations 
+        (addition, subtraction, multiplication, division) based on the given operator.
+
+        Input/Output Example:
+
+        Input: 5, 3, '+'
+        Output: 8
+        */
+        function simpleCalculator(num1, num2, operation) {
+
+            switch (operation) {
+                case "+":
+                    return num1 + num2;
+                    break;
+                case "-":
+                    return num1 - num2;
+                    break;
+                case "*":
+                    return num1 * num2;
+                    break;
+                case "/":
+                    return num1 / num2;
+                    break;
+                default:
+                    return "Invalid";
+                    break;
+            }
+        }
+
+        console.log(simpleCalculator(5, 3, "*"));
+
+        /*
+        Check if a Number is Prime
+        Problem: Create a function isPrime(num) that checks if a number is prime.A prime number is only divisible by 1 and itself.
+
+            Input / Output Example:
+
+        Input: 7
+
+        Output: true
+
+        Input: 10
+
+        Output: false
+        */
+
+        function isPrime(num) {
+
+            if (num == 1)
+                return false;
+
+            for (let i = 2; i < num; i++) {
+                if (num % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        console.log(isPrime(12));
+        console.log(isPrime(19));
+        console.log(isPrime(1));
+        console.log(isPrime(221));
+
+    </script>
+</body>
+
+</html>
